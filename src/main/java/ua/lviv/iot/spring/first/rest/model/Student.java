@@ -1,9 +1,16 @@
 package ua.lviv.iot.spring.first.rest.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Student {
     private String firstname;
     private String lastName;
-    private int id;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     public int getId() {
         return id;
